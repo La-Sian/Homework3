@@ -1,4 +1,5 @@
 // Import dependencies and components
+// paths are underlined but still work?
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Provider } from 'react-redux';
@@ -7,6 +8,8 @@ import Login from './components/Login'; // import the login component
 import Logout from './components/Logout'; // import the logout component
 import LoginUnsuccessful from './components/LoginUnsuccessful'; // import loginUnsuccessful component
 import './App.css'; // Import the CSS file for styling
+
+import UserProfile from './components/UserProfile';
 
 // Define the main App component
 const App = () => {
@@ -23,8 +26,11 @@ const App = () => {
           <Route path="/logout" element={<Logout />} />
           {/* route for the LoginUnsuccessful component */}
           <Route path="/login-unsuccessful" element={<LoginUnsuccessful />} />
+
+          <Route path="/profile" element={<UserProfile />} />
         </Routes>
       </Router>
+    
     </Provider>
   );
 };
